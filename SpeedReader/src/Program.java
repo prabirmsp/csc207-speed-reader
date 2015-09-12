@@ -9,6 +9,8 @@ public class Program {
 	 * and number of sentences it processed.
 	 * @param args
 	 * @throws Exception
+	 * citation: We leanrt how to make lines from stackoverflow:
+	 * <http://stackoverflow.com/questions/10767265/drawing-a-line-on-a-jframe>
 	 */
 	public static void main(String[] args) throws Exception {
 
