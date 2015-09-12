@@ -34,12 +34,5 @@ public class WordGenerator {
 	public int getSentenceCount(){
 		return sentenceCount;
 	}
-	
-	public void printWords(String filename) throws IOException {
-		Scanner text = new Scanner(new File(filename));
-		while (text.hasNext()) {
-			System.out.println(text.next());
-		}
-	}
 }
 

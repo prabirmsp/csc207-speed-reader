@@ -1,0 +1,31 @@
+import java.awt.*;
+
+public class Program {
+
+	public static void main(String[] args) throws Exception {
+		
+		System.out.println(
+				"Usage: SpeedReader <filename> <width> <height> <font size> <wpm>");
+		
+		WordGenerator generator = new WordGenerator("dr-suess.txt");
+		
+	    DrawingPanel panel = new DrawingPanel(400, 300);
+	    Graphics g = panel.getGraphics();
+	    Font f = new Font("Courier", Font.BOLD, 46);
+	    g.setFont(f);
+	    
+	    while (generator.hasNext()) {
+	    	panel.clear();
+	    	g.drawString(generator.next(), 100, 100);
+	    	Thread.sleep(500);
+	    }
+	    
+	    System.out.println("You read " + generator.getWordCount() + " words,");
+	    System.out.println("in " + generator.getSentenceCount() + " sentences!");
+		
+		
+	}
+	
+	
+
+}
